@@ -1,0 +1,1 @@
+window.RichManSave={key:'richman-dream-island-save-v1',save(state){try{localStorage.setItem(this.key,JSON.stringify({savedAt:Date.now(),state}));return true}catch(e){return false}},load(){try{const raw=localStorage.getItem(this.key);return raw?JSON.parse(raw):null}catch(e){return null}},clear(){localStorage.removeItem(this.key)},has(){return !!localStorage.getItem(this.key)}};
